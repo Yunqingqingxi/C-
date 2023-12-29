@@ -2,3 +2,4 @@
 Console.WriteLine("Hello, World!");
 Console.WriteLine("我爱你");
 var write = Console.ReadLine();
+awaitS
