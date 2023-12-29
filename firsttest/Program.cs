@@ -2,4 +2,8 @@
 Console.WriteLine("Hello, World!");
 Console.WriteLine("我爱你");
 var write = Console.ReadLine();
+<<<<<<< HEAD
 awaitS
+=======
+Console.WriteLine($"输入的write是:{write}");
+>>>>>>> master
