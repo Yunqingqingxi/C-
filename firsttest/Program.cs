@@ -16,8 +16,8 @@ namespace f1
             temp = Console.ReadLine();
             float b = float.Parse(temp);
             float c =F2.相加(a,b);
-            F3.selectMax(a,b,c);
-            Console.WriteLine($"c的值是:{c}");
+            F3.selectMax(c,a,b);
+            // Console.WriteLine($"c的值是:{c}");
         }
           static float 相加(float m,float n){
             return m+n;
@@ -49,6 +49,15 @@ namespace f1
                 b = temp;
             }
             Console.WriteLine($"{a},{b},{c}");
+            float max = c;
+            if(max>=17)
+            {
+                Console.WriteLine("年龄太大了不像是萝莉");
+            } 
+            else
+            {
+                Console.WriteLine("最爱萝莉了");
+            }
         }
     }
 }
