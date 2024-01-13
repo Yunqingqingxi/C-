@@ -6,8 +6,6 @@ namespace f1
     {
         static void Main(String[] args)
         {
-            F3.outputWord(); 
-
             String temp;
             Console.WriteLine("请输入一个数:");
             temp = Console.ReadLine();
@@ -25,10 +23,6 @@ namespace f1
     }
     class F3
     {
-        public static void outputWord(){
-            Console.WriteLine("我爱中国");
-        }
-
         public static void selectMax(float a,float b,float c){
             float temp;
             if(a>b)
