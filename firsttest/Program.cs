@@ -6,7 +6,7 @@ namespace f1
     {
         static void Main(String[] args)
         {
-            F3.outputWord();
+            F3.outputWord(); 
 
             String temp;
             Console.WriteLine("请输入一个数:");
