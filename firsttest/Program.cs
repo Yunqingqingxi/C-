@@ -16,7 +16,6 @@ namespace f1
             float c =F2.相加(a,b);
             F3.selectMax(c,a,b);
             // Console.WriteLine($"c的值是:{c}");
-            Console.ReadKey();
         }
           static float 相加(float m,float n){
             return m+n;
