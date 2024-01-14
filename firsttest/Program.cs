@@ -6,7 +6,6 @@ namespace f1
     {
         static void Main(String[] args)
         {
-            Console.WriteLine("我爱中国");
             String temp;
             Console.WriteLine("请输入一个数:");
             temp = Console.ReadLine();
