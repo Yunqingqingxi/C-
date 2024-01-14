@@ -42,7 +42,7 @@ namespace f1
                 a = b;
                 b = temp;
             }
-            Console.WriteLine($"{a},{b},{c}");
+            Console.WriteLine($"{a}>{b}>{c}");
             float max = c;
             if(max>=17)
             {
