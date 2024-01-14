@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Codefile\\C#\\firsttest\\firsttest.csproj": {}
+    "C:\\Users\\Y1116\\C-\\firsttest\\firsttest.csproj": {}
   },
   "projects": {
-    "D:\\Codefile\\C#\\firsttest\\firsttest.csproj": {
+    "C:\\Users\\Y1116\\C-\\firsttest\\firsttest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Codefile\\C#\\firsttest\\firsttest.csproj",
+        "projectUniqueName": "C:\\Users\\Y1116\\C-\\firsttest\\firsttest.csproj",
         "projectName": "firsttest",
-        "projectPath": "D:\\Codefile\\C#\\firsttest\\firsttest.csproj",
+        "projectPath": "C:\\Users\\Y1116\\C-\\firsttest\\firsttest.csproj",
         "packagesPath": "C:\\Users\\Y1116\\.nuget\\packages\\",
-        "outputPath": "D:\\Codefile\\C#\\firsttest\\obj\\",
+        "outputPath": "C:\\Users\\Y1116\\C-\\firsttest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Y1116\\AppData\\Roaming\\NuGet\\NuGet.Config"
