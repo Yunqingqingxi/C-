@@ -1,0 +1,8 @@
+﻿################################################################################
+# 此 .gitignore 文件已由 Microsoft(R) Visual Studio 自动创建。
+################################################################################
+
+/firsttest/.vs/firsttest/FileContentIndex
+*.vsidx
+*.vsidx
+/firsttest/.vs/firsttest/FileContentIndex/aa8f1a78-f5ec-495a-9eb7-0de8fb3bb356.vsidx
