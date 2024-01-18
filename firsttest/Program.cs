@@ -71,17 +71,17 @@ namespace f1
                 for(int deadline = 15;deadline<=100;deadline++)
                 {
                     Pay_dl = deadline * longPay;
-                     if(Pay_d == Pay_dl && (Pay_dl-Pay_d)<washPay)
+                     if(Pay_d == Pay_dl && (Pay_dl-Pay_d)<=washPay)
                      {
                         Console.WriteLine("最合适短租天数"+day+"最合适长租天数"+deadline);
                         Console.WriteLine($"此时已经得到的Pay_d:{Pay_d}和Pay_dl:{Pay_dl}");
                      }
                      else
                      {
-                        Console.WriteLine("没有相同价格或者与你的心理差价相近的租法,可以随意购买");
+                        Console.WriteLine("没有相同价格或者与你的心理差价相近的租法,可以随意购买或者尝试推荐购买");
                         Console.WriteLine("\n");
                         Console.WriteLine("推荐购买:");
-                        Console.WriteLine("输入1推荐长租,输入2推荐短租");
+                        Console.WriteLine("输入1推荐长租,输入2推荐短租,输入3退出推荐");
                         String select = Console.ReadLine();
                         float washday;
                         switch(select)
@@ -91,10 +91,11 @@ namespace f1
                             washday = washMoney/longPay;
                             if(washday > 15 && washday <= 100)
                             {
-                                Console.WriteLine("你可以购买的最长长租天数是"+washday);
+                                Pay_dl = washday * longPay;
+                                Console.WriteLine("你可以购买的最长长租天数是"+washday+",共需花费"+Pay_dl);
                             }else{
                                 if(washday < 15)
-                                Console.WriteLine("应该不可能读到这个");
+                                Console.WriteLine("应该不可能读到这个位置");
                             }
                             break;
                             // 当用户想用最大价格租短租时
@@ -102,7 +103,8 @@ namespace f1
                             washday = washMoney/shortPay;
                             if(washday > 0 && washday <15)
                             {
-                                Console.WriteLine("你可以购买的最长短租天数是"+washday);
+                                Pay_d = washday * shortPay; 
+                                Console.WriteLine("你可以购买的最长短租天数是"+washday+",共需花费"+Pay_d);
                             }
                             else
                             {
@@ -110,6 +112,9 @@ namespace f1
                                 return;
                             }
                             break;
+                            case "3":
+                            
+                            return;
                             default:
                             break;
                         }
