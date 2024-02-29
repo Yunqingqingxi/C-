@@ -113,12 +113,12 @@ namespace f1
         // 最优租赁计算
         public static void bestPay(float shortPay,float longPay,float washPay,float washMoney)
         {
-            double Pay_dshort = 0;
-            double Pay_dlong = 0;
-            for(int day = 8;day<22;day++)
+            double Pay_d = 0;
+            double Pay_dl = 0;
+            for(int day = 8;day<15;day++)
             {
-                Pay_dshort = day * shortPay;
-                for(int deadline = 22;deadline<=100;deadline++)
+                Pay_d = day * shortPay;
+                for(int deadline = 15;deadline<=100;deadline++)
                 {
                     Pay_dlong = deadline * longPay;
                     if ((Pay_dlong - Pay_dshort) <= washPay)
@@ -129,7 +129,10 @@ namespace f1
                     }
                     else
                     {
-                        Console.WriteLine("没有相同价格或者与你的心理差价相近的租法?你可以随意购买或者尝试推荐购买");
+                        Console.WriteLine("没有相同价格或者与你的心理差价相近的租法,可以随意购买或者尝试推荐购买");
+                    }
+                    if (Pay_d != Pay_dl)
+                    {
                         Console.WriteLine("\n");
                         Console.WriteLine("推荐购买:");
                         Console.WriteLine("输入1推荐长租,输入2推荐短租,输入3退出推荐");
@@ -142,15 +145,13 @@ namespace f1
                                 washday = washMoney / longPay;
                                 if (washday > 22 && washday <= 100)
                                 {
-                                    Pay_dlong = washday * longPay;
-                                    Console.WriteLine($"你可以购买的最长长租天数是"+switchInt(washday)+",共需花费"+Pay_dlong);
+                                    Pay_dl = washday * longPay;
+                                    Console.WriteLine("你可以购买的最长长租天数是" + washday + ",共需花费" + Pay_dl);
                                 }
                                 else
                                 {
-                                    if(washday < 22)
-                                        Console.WriteLine("你的预算不够");
-                                    if (washday > 100)
-                                        Console.WriteLine("你的预算太充足了，可以直接租满100天,花费"+(100 * longPay));
+                                    if (washday < 15)
+                                        Console.WriteLine("应该不可能读到这个位置");
                                 }
                                 break;
                             // 当用户想用最大价格租短租时
@@ -164,7 +165,7 @@ namespace f1
                                 else
                                 {
                                     Console.WriteLine("你的预算充足，建议你长租");
-                                    Console.WriteLine("\n或者减少预算购买最长短租租期:22天,\n你的短租花费为" + (22 * shortPay));
+                                    Console.WriteLine("\n或者减少预算购买最长短租租期:14天,\n你的短租花费为"+(14*shortPay));
                                     continue;
                                 }
                                 break;
@@ -174,6 +175,12 @@ namespace f1
                                 break;
                         }
                     }
+                    else 
+                    {
+                        Console.WriteLine("价格相同的情况下建议长租");
+                        return;
+                    }
+                   
                 }
             }
         }
